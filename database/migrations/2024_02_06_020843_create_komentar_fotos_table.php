@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('komentar_fotos', function (Blueprint $table) {
             $table->id();
+            $table->integer('FotoID');
+            $table->integer('UserID');
+            $table->text('IsiKomentar');
+            $table->date('TanggalKomentar');
             $table->timestamps();
         });
     }

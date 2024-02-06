@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('like_fotos', function (Blueprint $table) {
             $table->id();
+            $table->integer('foto_ID');
+            $table->integer('User_ID');
+            $table->date('TanggalLike');
             $table->timestamps();
         });
     }

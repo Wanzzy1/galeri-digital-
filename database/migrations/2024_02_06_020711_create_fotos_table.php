@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('fotos', function (Blueprint $table) {
             $table->id();
+            $table->string('JudulFoto');
+            $table->text('DesripsiFoto');
+            $table->date('TanggalUpload');
+            $table->string('LokasiFile');
+            $table->integer('UserID');
+
             $table->timestamps();
         });
     }
